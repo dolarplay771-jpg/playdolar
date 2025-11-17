@@ -26,7 +26,7 @@ export function Hero() {
           {/* Left: Content */}
           <div className="text-left animate-slide-in-left">
             <h1 className="font-sans font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-white mb-6 text-balance leading-tight">
-              Ganhe mais de <span className="text-[#FFC107]">5 mil dólares</span> por mês de dentro de casa
+              Sabia que você pode <span className="text-[#FFC107]">lucrar em dólar</span> operando de dentro do conforto da sua casa?
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-[#F5F5F5] mb-8 text-pretty leading-relaxed">
@@ -74,7 +74,7 @@ export function Hero() {
               ) : (
               <iframe
                 className="w-full h-full"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                src="https://www.youtube.com/embed/oPz-pys_2Hs?autoplay=1"
                 title="Play Dólar - Como Funciona"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

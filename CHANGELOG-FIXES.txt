@@ -1,0 +1,54 @@
+===========================================
+CORREÇÕES APLICADAS PARA DEPLOY NA NETLIFY
+===========================================
+
+1. REMOVIDO plugin @netlify/plugin-nextjs
+   - O Netlify detecta Next.js automaticamente
+   - Arquivo: netlify.toml
+
+2. REMOVIDAS pastas de build (.next/, .netlify/)
+   - Essas pastas são geradas durante o build
+   - Não devem ser enviadas no Git
+
+3. REMOVIDO script "lint" do package.json
+   - Evita erros se eslint não estiver configurado
+   - Mantém apenas: build, dev, start
+
+4. ATUALIZADO .gitignore
+   - Ignora arquivos de build dentro de deploy/
+   - Permite commit de todos os arquivos de código
+
+5. VERIFICADO components.json
+   - Arquivo está na raiz de deploy/ (correto)
+   - Não deve estar em app/
+
+===========================================
+ESTRUTURA CORRETA:
+===========================================
+
+deploy/
+├── app/              (páginas e layouts)
+├── components/       (componentes React)
+├── hooks/            (custom hooks)
+├── lib/              (utilitários)
+├── public/           (imagens e assets)
+├── styles/           (estilos adicionais)
+├── components.json   (config shadcn/ui)
+├── package.json      (dependências)
+├── pnpm-lock.yaml    (lock file)
+├── netlify.toml      (config Netlify)
+├── next.config.mjs   (config Next.js)
+├── tsconfig.json     (config TypeScript)
+└── postcss.config.mjs (config PostCSS)
+
+===========================================
+O QUE NÃO DEVE ESTAR EM DEPLOY:
+===========================================
+
+❌ .next/          (gerado no build)
+❌ .netlify/        (gerado no build)
+❌ node_modules/    (instalado no build)
+❌ out/             (gerado no build)
+
+===========================================
+
