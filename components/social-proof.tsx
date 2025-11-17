@@ -10,18 +10,15 @@ export function SocialProof() {
 
   const testimonials = [
     {
-      videoId: "dQw4w9WgXcQ",
-      thumbnail: "/video-thumbnail.png",
+      videoId: "myFRjIJpwCw",
       title: "Depoimento 1",
     },
     {
-      videoId: "dQw4w9WgXcQ",
-      thumbnail: "/video-thumbnail.png",
+      videoId: "vPc4TdLfGs0",
       title: "Depoimento 2",
     },
     {
-      videoId: "dQw4w9WgXcQ",
-      thumbnail: "/video-thumbnail.png",
+      videoId: "6Z5Haa_tcEU",
       title: "Depoimento 3",
     },
   ]
@@ -61,17 +58,16 @@ export function SocialProof() {
               viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <Card className="bg-white border-zinc-300 hover:border-black transition-all overflow-hidden shadow-lg">
-              <CardContent className="p-0">
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group">
+              <Card className="bg-white border-0 overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_16px_rgba(0,0,0,0.2)] transition-all p-0">
+              <CardContent className="p-0 m-0">
+                <div className="relative aspect-[9/16] overflow-hidden cursor-pointer group w-full h-full">
                   {!startedVideos[index] ? (
                     <>
-                      {/* Thumbnail */}
-                      <div
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{
-                          backgroundImage: `url('${testimonial.thumbnail}')`,
-                        }}
+                      {/* Thumbnail do YouTube */}
+                      <img
+                        src={`https://img.youtube.com/vi/${testimonial.videoId}/maxresdefault.jpg`}
+                        alt={testimonial.title}
+                        className="w-full h-full object-cover"
                       />
                       {/* Overlay escuro */}
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
