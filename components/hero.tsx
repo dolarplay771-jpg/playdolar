@@ -4,7 +4,11 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Play } from "lucide-react"
 
-export function Hero() {
+interface HeroProps {
+  ctaUrl?: string
+}
+
+export function Hero({ ctaUrl = "https://t.me/+JQAUWrqRrw8xYjAx" }: HeroProps) {
   const [videoStarted, setVideoStarted] = useState(false)
 
   useEffect(() => {
@@ -29,7 +33,7 @@ export function Hero() {
       <div className="relative z-10 max-w-[95vw] xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-8 lg:gap-12 items-center">
           {/* Left: Content */}
-          <div className="text-left animate-slide-in-left">
+          <div className="text-left animate-slide-in-left order-2 lg:order-1">
             <h1 className="font-sans font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-white mb-6 text-balance leading-tight">
               Sabia que você pode <span className="text-[#FFC107]">lucrar em dólar</span> operando de dentro do conforto da sua casa?
             </h1>
@@ -45,14 +49,14 @@ export function Hero() {
                 size="lg"
                 className="bg-[#FFC107] hover:bg-[#FFB300] text-black font-bold text-base sm:text-lg px-12 sm:px-16 py-4 sm:py-6 h-auto rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-[#FFC107]/50 w-full sm:w-auto min-w-[280px]"
               >
-                <a href="https://t.me/+JQAUWrqRrw8xYjAx" target="_blank" rel="noopener noreferrer">
+                <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
                   Opere agora <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
             </div>
           </div>
 
-          <div className="relative animate-slide-in-right w-full">
+          <div className="relative animate-slide-in-right w-full order-1 lg:order-2">
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-[#FFC107]/30 hover:border-[#FFC107] transition-all w-full max-w-2xl mx-auto lg:max-w-none relative cursor-pointer group">
               {!videoStarted ? (
                 <>

@@ -4,7 +4,11 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
 
-export function StickyCTA() {
+interface StickyCTAProps {
+  ctaUrl?: string
+}
+
+export function StickyCTA({ ctaUrl = "https://t.me/+JQAUWrqRrw8xYjAx" }: StickyCTAProps) {
   const [isVisible, setIsVisible] = useState(false)
   const [isClosed, setIsClosed] = useState(false)
 
@@ -36,7 +40,7 @@ export function StickyCTA() {
         </button>
 
         <Button asChild className="w-full bg-[#FFC107] hover:bg-[#FFB300] text-black font-bold py-6 rounded-lg">
-          <a href="https://t.me/+JQAUWrqRrw8xYjAx" target="_blank" rel="noopener noreferrer">
+          <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
             <span className="mr-2 text-xl font-bold">$</span>
             Comece a lucrar agora
           </a>

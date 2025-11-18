@@ -4,7 +4,11 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 
-export function FinalCTA() {
+interface FinalCTAProps {
+  ctaUrl?: string
+}
+
+export function FinalCTA({ ctaUrl = "https://t.me/+JQAUWrqRrw8xYjAx" }: FinalCTAProps) {
   return (
     <section
       id="cta-final"
@@ -61,7 +65,7 @@ export function FinalCTA() {
             size="lg"
             className="bg-[#FFC107] hover:bg-[#FFB300] text-black font-bold text-xl px-10 py-7 h-auto rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-[#FFC107]/20"
           >
-            <a href="https://t.me/+JQAUWrqRrw8xYjAx" target="_blank" rel="noopener noreferrer">
+            <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
               <span className="mr-2 text-2xl font-bold">$</span>
               Comece a lucrar agora
               <ArrowRight className="ml-2 h-6 w-6" />
