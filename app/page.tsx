@@ -16,8 +16,8 @@ export default function PlayDolarLanding() {
       <HowItWorks />
       <Benefits />
       <SocialProof />
-      <FAQ />
       <FinalCTA />
+      <FAQ />
       <Footer />
       <StickyCTA />
     </div>

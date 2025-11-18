@@ -6,9 +6,9 @@ import { motion } from "framer-motion"
 
 export function FinalCTA() {
   return (
-    <section 
-      id="cta-final" 
-      className="relative py-20 px-4 overflow-hidden min-h-[500px] flex items-center"
+    <section
+      id="cta-final"
+      className="relative py-24 px-4 overflow-hidden min-h-[500px] flex items-center"
     >
       {/* Background Image */}
       <img 
@@ -19,6 +19,15 @@ export function FinalCTA() {
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/75 z-[1]" />
+      {/* Section dividers */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 -top-24 h-24 bg-gradient-to-b from-[#FFC107] via-[#FFC107]/50 to-transparent z-[2]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 -bottom-24 h-24 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-[2]"
+      />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center w-full">
         <motion.h2

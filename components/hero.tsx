@@ -1,11 +1,16 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Play } from "lucide-react"
 
 export function Hero() {
   const [videoStarted, setVideoStarted] = useState(false)
+
+  useEffect(() => {
+    setVideoStarted(true)
+  }, [])
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden animate-fade-in">
       {/* Background Image with Overlay */}
@@ -72,14 +77,19 @@ export function Hero() {
                   </button>
                 </>
               ) : (
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/oPz-pys_2Hs?autoplay=1"
-                title="Play Dólar - Como Funciona"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/oPz-pys_2Hs?autoplay=1&mute=1&playsinline=1"
+                  title="Play Dólar - Como Funciona"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               )}
+            </div>
+            <div className="mt-4 text-center">
+              <div className="inline-flex items-center gap-2 bg-black/60 border border-[#FFC107]/40 text-[#FFC107] px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                ⚠️ Primeira e ÚNICA turma • Vagas limitadas • Encerra a qualquer momento
+              </div>
             </div>
           </div>
         </div>
