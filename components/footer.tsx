@@ -19,7 +19,7 @@ export function Footer() {
               <Instagram className="h-6 w-6" />
             </a>
             <a
-              href="https://t.me/+JQAUWrqRrw8xYjAx"
+              href="https://t.me/+B0Lwxo4_Ong5OGQx"
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-400 hover:text-[#FFC107] transition-colors"
