@@ -8,7 +8,7 @@ interface StickyCTAProps {
   ctaUrl?: string
 }
 
-export function StickyCTA({ ctaUrl = "https://t.me/+B0Lwxo4_Ong5OGQx" }: StickyCTAProps) {
+export function StickyCTA({ ctaUrl = "https://t.me/+nYINBrccrtk1YmEx" }: StickyCTAProps) {
   const [isVisible, setIsVisible] = useState(false)
   const [isClosed, setIsClosed] = useState(false)
 

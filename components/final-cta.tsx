@@ -8,7 +8,7 @@ interface FinalCTAProps {
   ctaUrl?: string
 }
 
-export function FinalCTA({ ctaUrl = "https://t.me/+B0Lwxo4_Ong5OGQx" }: FinalCTAProps) {
+export function FinalCTA({ ctaUrl = "https://t.me/+nYINBrccrtk1YmEx" }: FinalCTAProps) {
   return (
     <section
       id="cta-final"

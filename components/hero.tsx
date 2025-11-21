@@ -8,7 +8,7 @@ interface HeroProps {
   ctaUrl?: string
 }
 
-export function Hero({ ctaUrl = "https://t.me/+B0Lwxo4_Ong5OGQx" }: HeroProps) {
+export function Hero({ ctaUrl = "https://t.me/+nYINBrccrtk1YmEx" }: HeroProps) {
   const [videoStarted, setVideoStarted] = useState(false)
 
   useEffect(() => {
