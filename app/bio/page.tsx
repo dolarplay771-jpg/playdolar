@@ -15,3 +15,4 @@ export default function BioPage() {
   return <Bio />
 }
 
+
