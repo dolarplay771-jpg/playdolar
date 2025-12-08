@@ -160,8 +160,8 @@ export function Bio({
               >
                 <a 
                   href={link.url} 
-                  target={link.url.startsWith('http') ? "_blank" : undefined}
-                  rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="flex items-center justify-between w-full gap-3"
                 >
                   <div className="flex items-center gap-3">
@@ -189,5 +189,4 @@ export function Bio({
     </div>
   )
 }
-
 
