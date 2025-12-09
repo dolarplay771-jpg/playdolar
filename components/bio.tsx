@@ -51,9 +51,9 @@ const getIcon = (iconName?: string) => {
 }
 
 export function Bio({
-  name = "Steh Giovana",
-  username = "@stehgiovana",
-  bio = "Comunidade de traders que lucram em dólar operando de casa. Estratégias testadas, suporte ao vivo e sinais precisos.",
+  name = "",
+  username = "",
+  bio = "Te ensino a lucrar em Dólar usando robôs e inteligência artificial",
   avatar = "/587608550_18111863461608360_3755551491441497024_n.jpg",
   links = [
     {
@@ -87,7 +87,7 @@ export function Bio({
   ]
 }: BioProps) {
   return (
-    <div className="min-h-screen relative flex flex-col items-center p-4 pt-20 pb-12 overflow-hidden">
+    <div className="min-h-screen relative flex flex-col items-center p-4 pt-32 pb-12 overflow-hidden">
       {/* Background Image */}
       <div 
         className="fixed inset-0 z-0"
@@ -103,35 +103,44 @@ export function Bio({
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-md space-y-6 animate-fade-in">
-        {/* Logo Section - Compacta no topo */}
-        <div className="flex flex-col items-center gap-3 mb-8 animate-fade-in-up">
-          <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-[#FFC107] shadow-lg shadow-[#FFC107]/30 animate-pulse-subtle">
+        {/* Logo and Bio Section - Horizontal Layout */}
+        <div className="flex items-center gap-4 mb-4 animate-fade-in-up">
+          {/* Avatar */}
+          <div className="relative w-20 h-20 flex-shrink-0 rounded-full overflow-hidden border-2 border-[#FFC107] shadow-lg shadow-[#FFC107]/30 animate-pulse-subtle">
             <Image
               src={avatar}
-              alt={name}
+              alt="Avatar"
               fill
               className="object-cover"
               priority
             />
           </div>
-          <div className="text-center">
-            <h1 className="text-xl font-bold text-white font-sans drop-shadow-lg">
-              {name}
-            </h1>
-            <p className="text-[#FFC107] text-sm font-medium mt-1">
-              {username}
-            </p>
-          </div>
+          
+          {/* Bio Text with Yellow Background */}
+          {bio && (
+            <div className="flex-1 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              <div className="bg-gradient-to-r from-[#FFC107] via-[#FFD54F] to-[#FFC107] rounded-xl px-3 py-2 shadow-lg">
+                <p className="text-black text-xs font-bold leading-tight">
+                  {bio}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
 
-        {/* Bio Text */}
-        {bio && (
-          <div className="text-center mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            <p className="text-[#F5F5F5] text-sm leading-relaxed drop-shadow-md">
-              {bio}
-            </p>
-          </div>
-        )}
+        {/* Instagram Username with Verified Badge */}
+        <div className="flex items-center justify-center gap-2 mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <span className="text-white text-sm font-semibold">@stehgiovana</span>
+          <svg 
+            className="w-4 h-4" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="10" fill="#0095F6"/>
+            <path d="M9.5 12L11 13.5L14.5 10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
 
         {/* Links Section */}
         <div className="space-y-3">
