@@ -28,7 +28,7 @@ export function Footer() {
               <Send className="h-6 w-6" />
             </a>
             <a
-              href="https://chat.whatsapp.com/HCrBfuKJ1Mw3dgA6lyQROP"
+              href="https://wa.me/5518981107751?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20aprender%20a%20faturar%20em%20d%C3%B3lar!"
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-400 hover:text-[#FFC107] transition-colors"

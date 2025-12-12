@@ -8,7 +8,7 @@ import { FinalCTA } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
 import { StickyCTA } from "@/components/sticky-cta"
 
-const WHATSAPP_URL = "https://chat.whatsapp.com/HCrBfuKJ1Mw3dgA6lyQROP"
+const WHATSAPP_URL = "https://wa.me/5518981107751?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20aprender%20a%20faturar%20em%20d%C3%B3lar!"
 
 export default function PlayDolarWhatsApp() {
   return (

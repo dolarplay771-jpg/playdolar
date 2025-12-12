@@ -80,7 +80,7 @@ export function Bio({
     {
       id: "4",
       title: "Fale Conosco no WhatsApp",
-      url: "https://chat.whatsapp.com/HCrBfuKJ1Mw3dgA6lyQROP",
+      url: "https://wa.me/5518981107751?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20aprender%20a%20faturar%20em%20d%C3%B3lar!",
       icon: "whatsapp",
       variant: "default"
     },
