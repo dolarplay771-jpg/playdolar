@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
+import { fbqEvent } from "@/lib/fbq"
 
 interface FinalCTAProps {
   ctaUrl?: string
@@ -65,7 +66,12 @@ export function FinalCTA({ ctaUrl = "https://t.me/+nYINBrccrtk1YmEx" }: FinalCTA
             size="lg"
             className="bg-[#FFC107] hover:bg-[#FFB300] text-black font-bold text-xl px-10 py-7 h-auto rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-[#FFC107]/20"
           >
-            <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={ctaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => fbqEvent("Lead", { source: "final_cta" })}
+            >
               <span className="mr-2 text-2xl font-bold">$</span>
               Comece a lucrar agora
               <ArrowRight className="ml-2 h-6 w-6" />

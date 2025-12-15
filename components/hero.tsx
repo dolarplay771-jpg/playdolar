@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Play } from "lucide-react"
+import { fbqEvent } from "@/lib/fbq"
 
 interface HeroProps {
   ctaUrl?: string
@@ -49,7 +50,12 @@ export function Hero({ ctaUrl = "https://t.me/+nYINBrccrtk1YmEx" }: HeroProps) {
                 size="lg"
                 className="bg-[#FFC107] hover:bg-[#FFB300] text-black font-bold text-base sm:text-lg px-12 sm:px-16 py-4 sm:py-6 h-auto rounded-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-[#FFC107]/50 w-full sm:w-auto min-w-[280px]"
               >
-                <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={ctaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => fbqEvent("Lead", { source: "hero_cta" })}
+                >
                   Opere agora <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>

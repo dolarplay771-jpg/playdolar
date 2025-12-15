@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
+import { fbqEvent } from "@/lib/fbq"
 
 interface StickyCTAProps {
   ctaUrl?: string
@@ -40,7 +41,12 @@ export function StickyCTA({ ctaUrl = "https://t.me/+nYINBrccrtk1YmEx" }: StickyC
         </button>
 
         <Button asChild className="w-full bg-[#FFC107] hover:bg-[#FFB300] text-black font-bold py-6 rounded-lg">
-          <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
+          <a
+            href={ctaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => fbqEvent("Lead", { source: "sticky_cta" })}
+          >
             <span className="mr-2 text-xl font-bold">$</span>
             Comece a lucrar agora
           </a>

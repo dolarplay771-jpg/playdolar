@@ -16,6 +16,7 @@ import {
   ArrowRight
 } from "lucide-react"
 import Image from "next/image"
+import { fbqEvent } from "@/lib/fbq"
 
 interface LinkItem {
   id: string
@@ -171,6 +172,7 @@ export function Bio({
                   href={link.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  onClick={() => fbqEvent("Lead", { source: `bio_link_${link.id}` })}
                   className="flex items-center justify-between w-full gap-3"
                 >
                   <div className="flex items-center gap-3">
