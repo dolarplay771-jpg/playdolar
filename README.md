@@ -1,102 +1,20 @@
-# Play Dólar - Landing Page
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Landing page para a comunidade Play Dólar - Ganhe em dólar operando de casa.
+# Run and deploy your AI Studio app
 
-## 🚀 Tecnologias
+This contains everything you need to run your app locally.
 
-- **Next.js 16** - Framework React
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS** - Estilização
-- **Framer Motion** - Animações baseadas em scroll
-- **Radix UI** - Componentes acessíveis
+View your app in AI Studio: https://ai.studio/apps/drive/1o38I_ab9MKTxDvxtZCFeIq09ygTjHU2K
 
-## 📦 Instalação
+## Run Locally
 
-```bash
-# Instalar dependências
-npm install
+**Prerequisites:**  Node.js
 
-# Ou usando pnpm
-npx pnpm install
-```
 
-## 🛠️ Desenvolvimento
-
-```bash
-# Iniciar servidor de desenvolvimento
-npm run dev
-
-# Ou usando pnpm
-npx pnpm dev
-```
-
-Acesse [http://localhost:3000](http://localhost:3000) no navegador.
-
-## 🏗️ Build
-
-```bash
-# Criar build de produção
-npm run build
-
-# Iniciar servidor de produção
-npm start
-```
-
-## 🌐 Deploy na Netlify
-
-### Opção 1: Deploy via Git (Recomendado)
-
-1. Faça push do código para um repositório Git (GitHub, GitLab, Bitbucket)
-2. Acesse [Netlify](https://www.netlify.com/)
-3. Clique em "Add new site" > "Import an existing project"
-4. Conecte seu repositório Git
-5. Configure as seguintes opções:
-   - **Build command**: `npm run build`
-   - **Publish directory**: `.next`
-   - **Node version**: `20`
-6. Clique em "Deploy site"
-
-### Opção 2: Deploy via Netlify CLI
-
-```bash
-# 1. Fazer login (primeira vez apenas)
-npx netlify login
-
-# 2. Inicializar o site (primeira vez apenas)
-npx netlify init
-
-# 3. Deploy de produção
-npx netlify deploy -p
-# ou
-npx netlify deploy --prod
-```
-
-**Nota:** O comando `npx` não requer instalação global. O flag `-p` ou `--prod` faz o deploy direto para produção.
-
-### Opção 3: Deploy via Drag & Drop
-
-1. Execute o build localmente:
-   ```bash
-   npm run build
-   ```
-2. Acesse [Netlify Drop](https://app.netlify.com/drop)
-3. Arraste a pasta `.next` para a área de upload
-
-## ⚙️ Configurações
-
-O arquivo `netlify.toml` já está configurado com:
-- Plugin Next.js para otimização automática
-- Node.js versão 20
-- Flags do npm para compatibilidade
-
-## 📝 Notas
-
-- O projeto usa `images.unoptimized: true` no `next.config.mjs` para compatibilidade
-- As animações são baseadas em scroll usando Framer Motion
-- O indicador de desenvolvimento do Next.js está desabilitado
-
-## 🔗 Links
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Netlify Documentation](https://docs.netlify.com/)
-
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
